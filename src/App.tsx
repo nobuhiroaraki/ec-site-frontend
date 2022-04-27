@@ -1,10 +1,10 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import React from "react";
+import { theme } from "./theme";
 import { Products } from "./components/pages/Products";
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Products />
     </ChakraProvider>
   );
