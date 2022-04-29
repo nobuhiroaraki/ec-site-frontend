@@ -13,10 +13,10 @@ export const ProductImg: FC<Props> = memo((props) => {
       <Image
         alt="productsImg"
         src={imgSrc}
-        boxSize="120"
+        boxSize="200"
         borderRadius="2xl"
         shadow="md"
-        marginTop={marginPx}
+        margin={marginPx}
       ></Image>
     </>
   );

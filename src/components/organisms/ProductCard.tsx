@@ -1,13 +1,15 @@
-import { Box, Stack, Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { FC, memo } from "react";
 
 import { ProductImg } from "../atoms/ProductImg";
+import { ProductContent } from "../molecules/ProductContent";
 
 export const ProductCard: FC = memo(() => {
   return (
     <>
       <Box
-        h="200px"
+        h="250px"
+        w="500px"
         margin="30px"
         padding="20px"
         bg="white"
@@ -15,8 +17,10 @@ export const ProductCard: FC = memo(() => {
         shadow="md"
         _hover={{ cursor: "pointer", opacity: 0.8 }}
       >
-        <ProductImg marginPx={"3"} />
-        商品名
+        <Box display="flex">
+          <ProductImg marginPx={"1"} />
+          <ProductContent productName="hoge" price={3000} starNum={3} />
+        </Box>
       </Box>
     </>
   );
