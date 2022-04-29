@@ -9,7 +9,6 @@ export const Footer: FC = memo(() => {
         bg="lavender"
         color="black"
         padding={{ base: 4, md: 6 }}
-        position="fixed"
         left={0}
         bottom={0}
         width="100%"
