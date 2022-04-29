@@ -15,8 +15,8 @@ export const ProductCard: FC = memo(() => {
         shadow="md"
         _hover={{ cursor: "pointer", opacity: 0.8 }}
       >
-        商品名
         <ProductImg marginPx={"3"} />
+        商品名
       </Box>
     </>
   );
