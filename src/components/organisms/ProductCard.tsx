@@ -17,8 +17,8 @@ export const ProductCard: FC<Props> = memo((props) => {
   return (
     <>
       <Box
-        h="250px"
-        w="500px"
+        h="300px"
+        w="450px"
         margin="30px"
         padding="20px"
         bg="white"
@@ -26,7 +26,7 @@ export const ProductCard: FC<Props> = memo((props) => {
         shadow="md"
         _hover={{ cursor: "pointer", opacity: 0.8 }}
       >
-        <Box display="flex">
+        <Box display="flex" justifyContent="center" alignItems="center">
           <ProductImg marginPx={"1"} id={id} />
           <ProductContent
             productName={title}
