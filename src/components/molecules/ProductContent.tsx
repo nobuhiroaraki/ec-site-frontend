@@ -4,11 +4,12 @@ import { FC, memo } from "react";
 type Props = {
   productName: string;
   price: number;
+  discountPercent: number;
   starNum: number;
 };
 
 export const ProductContent: FC<Props> = memo((props) => {
-  const { productName, price, starNum } = props;
+  const { productName, price, discountPercent, starNum } = props;
   return (
     <>
       <Box>
@@ -17,7 +18,7 @@ export const ProductContent: FC<Props> = memo((props) => {
             {productName}
           </Text>
           <Text fontSize="2xl" fontWeight="semibold">
-            {price}円
+            {price}円{discountPercent !== 0 ? `${discountPercent}%off` : ""}
           </Text>
           <Text fontSize="2xl" color="yellow.300">
             {"★".repeat(starNum)}

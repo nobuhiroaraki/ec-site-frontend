@@ -4,7 +4,15 @@ import { FC, memo } from "react";
 import { ProductImg } from "../atoms/ProductImg";
 import { ProductContent } from "../molecules/ProductContent";
 
-export const ProductCard: FC = memo(() => {
+type Props = {
+  title: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+};
+
+export const ProductCard: FC<Props> = memo((props) => {
+  const { title, price, discountPercentage, rating } = props;
   return (
     <>
       <Box
@@ -19,7 +27,12 @@ export const ProductCard: FC = memo(() => {
       >
         <Box display="flex">
           <ProductImg marginPx={"1"} />
-          <ProductContent productName="hoge" price={3000} starNum={3} />
+          <ProductContent
+            productName={title}
+            price={price}
+            discountPercent={discountPercentage}
+            starNum={Math.round(rating)}
+          />
         </Box>
       </Box>
     </>
