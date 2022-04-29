@@ -5,6 +5,7 @@ import { ProductImg } from "../atoms/ProductImg";
 import { ProductContent } from "../molecules/ProductContent";
 
 type Props = {
+  id: number;
   title: string;
   price: number;
   discountPercentage: number;
@@ -12,7 +13,7 @@ type Props = {
 };
 
 export const ProductCard: FC<Props> = memo((props) => {
-  const { title, price, discountPercentage, rating } = props;
+  const { id, title, price, discountPercentage, rating } = props;
   return (
     <>
       <Box
@@ -26,7 +27,7 @@ export const ProductCard: FC<Props> = memo((props) => {
         _hover={{ cursor: "pointer", opacity: 0.8 }}
       >
         <Box display="flex">
-          <ProductImg marginPx={"1"} />
+          <ProductImg marginPx={"1"} id={id} />
           <ProductContent
             productName={title}
             price={price}
