@@ -14,11 +14,14 @@ export const ProductContent: FC<Props> = memo((props) => {
     <>
       <Box>
         <Stack spacing={3} alignItems="center" margin="30px 50px">
-          <Text fontSize="2xl" fontWeight="bold">
+          <Text fontSize="2xl" fontWeight="bold" margin="auto">
             {productName}
           </Text>
-          <Text fontSize="1xl" fontWeight="semibold">
-            {price}円{discountPercent !== 0 ? `${discountPercent}%off` : ""}
+          <Text fontSize="2xl" fontWeight="medium">
+            {"$" + price}
+          </Text>
+          <Text fontSize="2xl" fontWeight="semibold" color="red">
+            {discountPercent !== 0 ? `${discountPercent}%off` : ""}
           </Text>
           <Text fontSize="1xl" color="yellow.300">
             {"★".repeat(starNum)}

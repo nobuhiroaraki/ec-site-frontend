@@ -17,10 +17,10 @@ export const ProductCard: FC<Props> = memo((props) => {
   return (
     <>
       <Box
-        h="300px"
+        h="280px"
         w="450px"
-        margin="30px"
-        padding="20px"
+        margin="10px"
+        padding="3"
         bg="white"
         borderRadius="10px"
         shadow="md"

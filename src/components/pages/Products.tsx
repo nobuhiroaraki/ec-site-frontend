@@ -11,9 +11,9 @@ export const Products: FC = memo(() => {
   return (
     <>
       <Header />
-      <Wrap justify="space-around">
+      <Wrap justify="space-around" margin="3">
         {products.map((product) => (
-          <WrapItem key={product.id} mx="auto">
+          <WrapItem key={product.id}>
             <ProductCard
               id={product.id}
               title={product.title}
