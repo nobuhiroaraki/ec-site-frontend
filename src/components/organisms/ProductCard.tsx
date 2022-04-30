@@ -3,6 +3,7 @@ import { FC, memo } from "react";
 
 import { ProductImg } from "../atoms/ProductImg";
 import { ProductContent } from "../molecules/ProductContent";
+import { useOnClickCard } from "../../hooks/useOnClickCard";
 
 type Props = {
   id: number;
@@ -14,6 +15,7 @@ type Props = {
 
 export const ProductCard: FC<Props> = memo((props) => {
   const { id, title, price, discountPercentage, rating } = props;
+  const { onClickCard } = useOnClickCard(props);
   return (
     <>
       <Box
@@ -25,6 +27,7 @@ export const ProductCard: FC<Props> = memo((props) => {
         borderRadius="10px"
         shadow="md"
         _hover={{ cursor: "pointer", opacity: 0.8 }}
+        onClick={onClickCard}
       >
         <Box display="flex" justifyContent="center" alignItems="center">
           <ProductImg marginPx={"1"} id={id} />
