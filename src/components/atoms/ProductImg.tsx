@@ -3,12 +3,12 @@ import { FC, memo } from "react";
 
 type Props = {
   marginPx: string;
-  id: number;
+  firstImage: string;
 };
 
 export const ProductImg: FC<Props> = memo((props) => {
-  const { marginPx, id } = props;
-  const imgSrc: string = `https://source.unsplash.com/random/${id}`;
+  const { marginPx, firstImage } = props;
+  const imgSrc: string = `${firstImage}`;
   return (
     <>
       <Image

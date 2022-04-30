@@ -30,7 +30,7 @@ export const ProductCard: FC<Props> = memo((props) => {
         onClick={onClickCard}
       >
         <Box display="flex" justifyContent="center" alignItems="center">
-          <ProductImg marginPx={"1"} id={id} />
+          <ProductImg marginPx={"1"} firstImage={thumbnail} />
           <ProductContent
             productName={title}
             price={price}
