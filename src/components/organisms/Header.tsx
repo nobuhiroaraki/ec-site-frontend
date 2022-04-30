@@ -1,10 +1,10 @@
 import { Flex, Heading, Button, Box } from "@chakra-ui/react";
 import { FC, memo } from "react";
 import { HeaderButton } from "../atoms/HeaderButton";
-import { useOnclickButton } from "../../hooks/useOnClickButton";
+import { useOnClickButton } from "../../hooks/useOnClickButton";
 
 export const Header: FC = memo(() => {
-  const { onClickRegister, onClickLogin } = useOnclickButton();
+  const { onClickRegister, onClickLogin } = useOnClickButton();
   return (
     <>
       <Flex

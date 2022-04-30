@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-export const useOnclickButton = () => {
+export const useOnClickButton = () => {
   const onClickRegister = useCallback(() => {
     alert("登録します");
   }, []);
