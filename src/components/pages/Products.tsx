@@ -3,7 +3,7 @@ import { ProductCard } from "../organisms/ProductCard";
 import { Footer } from "../organisms/Footer";
 import { Header } from "../organisms/Header";
 import { useGetProducts } from "../../hooks/useGetProducts";
-import { Wrap, WrapItem, Box } from "@chakra-ui/react";
+import { Wrap, WrapItem } from "@chakra-ui/react";
 
 export const Products: FC = memo(() => {
   const { getProducts, products } = useGetProducts();
