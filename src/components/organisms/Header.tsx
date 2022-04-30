@@ -1,7 +1,10 @@
 import { Flex, Heading, Button, Box } from "@chakra-ui/react";
 import { FC, memo } from "react";
+import { HeaderButton } from "../atoms/HeaderButton";
+import { useOnclickButton } from "../../hooks/useOnClickButton";
 
 export const Header: FC = memo(() => {
+  const { onClickRegister, onClickLogin } = useOnclickButton();
   return (
     <>
       <Flex
@@ -12,20 +15,17 @@ export const Header: FC = memo(() => {
         height="100px"
         align="center"
       >
-        <Heading fontSize="3xl" _hover={{ cursor: "pointer" }} margin="auto">
+        <Heading
+          fontSize="3xl"
+          _hover={{ cursor: "pointer" }}
+          margin="auto"
+          marginLeft="auto"
+        >
           ECサイト
         </Heading>
-        <Button
-          bg="green.600"
-          color="gray.50"
-          _hover={{ bg: "green.500" }}
-          onClick={onClick}
-        >
-          ログイン
-        </Button>
+        <HeaderButton text={"新規登録"} onClick={onClickRegister} />
+        <HeaderButton text={"ログイン"} onClick={onClickLogin} />
       </Flex>
     </>
   );
 });
-
-const onClick = () => alert("ログインしまーす");
