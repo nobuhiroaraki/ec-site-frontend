@@ -1,10 +1,12 @@
-import { Flex, Heading, Button, Box } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import { FC, memo } from "react";
 import { HeaderButton } from "../atoms/HeaderButton";
 import { useOnClickButton } from "../../hooks/useOnClickButton";
+import { useOnClickTitle } from "../../hooks/useOnClickTitle";
 
 export const Header: FC = memo(() => {
   const { onClickRegister, onClickLogin } = useOnClickButton();
+  const { onClickTitle } = useOnClickTitle();
   return (
     <>
       <Flex
@@ -20,6 +22,7 @@ export const Header: FC = memo(() => {
           _hover={{ cursor: "pointer" }}
           margin="auto"
           marginLeft="auto"
+          onClick={onClickTitle}
         >
           ECサイト
         </Heading>
