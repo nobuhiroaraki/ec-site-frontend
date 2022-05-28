@@ -20,6 +20,12 @@ export const Products: FC = memo(() => {
               price={product.price}
               discountPercentage={product.discountPercentage}
               rating={product.rating}
+              description={product.description}
+              images={product.images}
+              thumbnail={product.thumbnail}
+              stock={product.stock}
+              brand={product.brand}
+              category={product.category}
             />
           </WrapItem>
         ))}

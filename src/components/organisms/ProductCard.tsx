@@ -4,17 +4,10 @@ import { FC, memo } from "react";
 import { ProductImg } from "../atoms/ProductImg";
 import { ProductContent } from "../molecules/ProductContent";
 import { useOnClickCard } from "../../hooks/useOnClickCard";
+import { Product } from "../../types/product";
 
-type Props = {
-  id: number;
-  title: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-};
-
-export const ProductCard: FC<Props> = memo((props) => {
-  const { id, title, price, discountPercentage, rating } = props;
+export const ProductCard: FC<Product> = memo((props) => {
+  const { title, price, discountPercentage, rating, thumbnail } = props;
   const { onClickCard } = useOnClickCard(props);
   return (
     <>
